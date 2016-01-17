@@ -21,4 +21,4 @@ module.exports = function(options) {
   });
 };
 
-module.exports({url: 'http://onedio.com'}).then(console.log)
+module.exports.request = request;
