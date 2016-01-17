@@ -1,3 +1,4 @@
+var Promise = require("bluebird")
 var request = require("request")
 
 module.exports = function(options) {
