@@ -1,0 +1,15 @@
+{
+  "name": "@eknkc/request",
+  "version": "1.0.0",
+  "description": "Promisified request.js",
+  "main": "index.js",
+  "keywords": [
+    "request",
+    "promise"
+  ],
+  "author": "Ekin Koc",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.67.0"
+  }
+}
