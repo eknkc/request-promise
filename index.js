@@ -7,8 +7,11 @@ module.exports = function(options) {
       , sizeLimit = options.sizeLimit
 
     var req = request(options, function (err, response, body) {
-      if (err || response.statusCode != 200)
-        return rej(err || new Error("Response status: " + response.statusCode));
+      if (err || response.statusCode != 200) {
+        err = err || new Error("Response status: " + response.statusCode)
+        err.body = body;
+        return rej(err);
+      }
 
       res(body);
     }).on("data", function(data) {
