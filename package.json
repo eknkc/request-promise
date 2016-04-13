@@ -1,16 +1,20 @@
 {
   "name": "@eknkc/request",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Promisified request.js",
   "main": "index.js",
   "keywords": [
     "request",
     "promise"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eknkc/request-promise.git"
+  },
   "author": "Ekin Koc",
   "license": "ISC",
   "dependencies": {
-    "bluebird": "^3.3.4",
-    "request": "^2.70.0"
+    "bluebird": "^3.3.5",
+    "request": "^2.71.0"
   }
 }
