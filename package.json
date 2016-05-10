@@ -1,6 +1,6 @@
 {
   "name": "@eknkc/request",
-  "version": "1.2.1",
+  "version": "1.3.1",
   "description": "Promisified request.js",
   "main": "index.js",
   "keywords": [
@@ -15,6 +15,6 @@
   "license": "ISC",
   "dependencies": {
     "bluebird": "^3.3.5",
-    "request": "^2.71.0"
+    "request": "^2.72.0"
   }
 }
