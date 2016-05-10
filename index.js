@@ -1,10 +1,11 @@
 var Promise = require("bluebird")
 var request = require("request")
 
-module.exports = function(options) {
-  return new Promise(function(res, rej) {
+module.exports = function (options) {
+  return new Promise(function (res, rej) {
     var length = 0
       , sizeLimit = options.sizeLimit
+      , withResponse = options.withResponse
 
     var req = request(options, function (err, response, body) {
       if (err || response.statusCode != 200) {
@@ -13,8 +14,11 @@ module.exports = function(options) {
         return rej(err);
       }
 
+      if (withResponse)
+        return res({ response: response, body: body })
+
       res(body);
-    }).on("data", function(data) {
+    }).on("data", function (data) {
       length += data.length;
 
       if (sizeLimit && length > sizeLimit) {
